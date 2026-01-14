@@ -13,7 +13,7 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "PrexSecuritySignals.podspec"
+    "SecuritySignals.podspec"
   ],
   "author": "",
   "license": "MIT",
