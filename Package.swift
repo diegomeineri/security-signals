@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "PrexSecuritySignals",
+    name: "SecuritySignals",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "PrexSecuritySignals",
+            name: "SecuritySignals",
             targets: ["securitySignalsPlugin"])
     ],
     dependencies: [
