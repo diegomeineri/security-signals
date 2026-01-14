@@ -30,14 +30,14 @@ Este plugin es ideal para aplicaciones que requieren:
 ## 📦 Instalación
 
 ```bash
-npm install github:TU_USUARIO/security-signals
+npm install github:diegomeineri/security-signals
 npx cap sync
 ```
 
 O con una versión específica:
 
 ```bash
-npm install github:TU_USUARIO/security-signals#v1.0.0
+npm install github:diegomeineri/security-signals#v1.0.0
 npx cap sync
 ```
 
@@ -409,7 +409,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 Si encuentras algún bug o tienes una sugerencia, por favor abre un issue en GitHub:
 
-https://github.com/TU_USUARIO/security-signals/issues
+https://github.com/diegomeineri/security-signals/issues
 
 ---
 
