@@ -1,0 +1,247 @@
+{
+  "api": {
+    "name": "SecuritySignalsPlugin",
+    "slug": "securitysignalsplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "getScreenCaptureState",
+        "signature": "() => Promise<ScreenCaptureState>",
+        "parameters": [],
+        "returns": "Promise<ScreenCaptureState>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ScreenCaptureState"
+        ],
+        "slug": "getscreencapturestate"
+      },
+      {
+        "name": "startScreenCaptureWatcher",
+        "signature": "() => Promise<{ supported: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ supported: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "startscreencapturewatcher"
+      },
+      {
+        "name": "stopScreenCaptureWatcher",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopscreencapturewatcher"
+      },
+      {
+        "name": "getCommunicationState",
+        "signature": "() => Promise<CommunicationState>",
+        "parameters": [],
+        "returns": "Promise<CommunicationState>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CommunicationState"
+        ],
+        "slug": "getcommunicationstate"
+      },
+      {
+        "name": "startCommunicationWatcher",
+        "signature": "(options?: { pollMs?: number | undefined; } | undefined) => Promise<{ supported: boolean; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ pollMs?: number | undefined; } | undefined"
+          }
+        ],
+        "returns": "Promise<{ supported: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "startcommunicationwatcher"
+      },
+      {
+        "name": "stopCommunicationWatcher",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopcommunicationwatcher"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'screenCaptureChanged', listenerFunc: (state: { captured: boolean; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'screenCaptureChanged'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(state: { captured: boolean; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle"
+        ],
+        "slug": "addlistenerscreencapturechanged-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'communicationChanged', listenerFunc: (state: CommunicationState) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'communicationChanged'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(state: CommunicationState) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "CommunicationState"
+        ],
+        "slug": "addlistenercommunicationchanged-"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ScreenCaptureState",
+      "slug": "screencapturestate",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "supported",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "captured",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | null"
+        }
+      ]
+    },
+    {
+      "name": "CommunicationState",
+      "slug": "communicationstate",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "micInUseSupported",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "micInUse",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | null"
+        },
+        {
+          "name": "activeRecordings",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "callSupported",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "callActive",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | null"
+        },
+        {
+          "name": "audioMode",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'normal' | 'inCall' | 'inCommunication' | 'ringtone' | 'unknown' | undefined"
+        },
+        {
+          "name": "speakerphoneOn",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "bluetoothScoOn",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
