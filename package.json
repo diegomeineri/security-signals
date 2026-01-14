@@ -1,6 +1,6 @@
 {
   "name": "security-signals",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Security signals",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
